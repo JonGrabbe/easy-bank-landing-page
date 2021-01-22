@@ -22,6 +22,9 @@ ul, li, p {
 :root {
     --padding-space: 10%;
     --padding-space-mobile: 5%;
+    --light-grayish-blue: hsl(220, 16%, 96%);
+    --very-light-grey: hsl(0, 0%, 98%);
+    --grayish-blue: hsl(233, 8%, 62%);
 }
 .img-button {
     background: none;
@@ -66,15 +69,27 @@ header {
 
 /* ---- banner ---- */
 .banner-container {
-    background-color: lightgray;
+    background-color: var(--very-light-grey);
     height: 80vh;
     background-image: url('images/bg-intro-desktop.svg');
-    background-position: 200px 50px;
+    background-position: 110% 100%;
     background-repeat: no-repeat;
+    background-size: 800px 800px;
 }
 .banner-left-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 100%;
     max-width: 450px;
     margin-left: 160px;
+}
+.banner-left-col-item {
+    margin-bottom: 25px;
+}
+.banner-left-col-item:last-child {
+    margin-bottom: 0;
 }
 #banner-img {
     position: absolute;
