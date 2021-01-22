@@ -2,6 +2,7 @@ body {
     font-family: 'Public Sans', sans-serif;
     margin: 0;
     font-size: 18px;
+    overflow-x: hidden;
 }
 a {
     text-decoration: none;
@@ -9,7 +10,7 @@ a {
 a:visited {
     color: inherit;
 }
-ul, li {
+ul, li, p {
     padding: 0;
     margin: 0;
     list-style-type: none;
@@ -31,6 +32,7 @@ button:hover {
 }
 .heading {
     font-weight: 400;
+    margin: 0;
 }
 .heading-large {
     font-size: 3em;
@@ -43,7 +45,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 45px var(--padding-space);
+    padding: 28px var(--padding-space);
     position: relative;
     z-index: 100;
     background-color: white;
@@ -64,28 +66,35 @@ header {
 
 /* ---- banner ---- */
 .banner-container {
-    /* display: flex;
-    align-items: center;
-    justify-content: space-between; */
-    background-color:hsl(0, 0%, 98%);
-    padding-top: 200px;
-    padding-bottom: 200px;
+    background-color: lightgray;
+    height: 80vh;
+    background-image: url('images/bg-intro-desktop.svg');
+    background-position: 200px 50px;
+    background-repeat: no-repeat;
 }
 .banner-left-col {
-    width: 25%;
+    max-width: 450px;
     margin-left: 160px;
 }
 #banner-img {
     position: absolute;
-    top: -150px;
-    right: 0;
+    top: -34px;
+    right: -116px;
     z-index: 0;
+    width: 699px;
 }
 
 
 
 
 
+
+
+@media(max-width: 1510px) {
+    .banner-left-col {
+        /* width: 30%; */
+    }
+}
 
 
 @media(max-width: 910px) {
