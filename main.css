@@ -18,11 +18,26 @@ ul, li {
 
 
 
+/* ---- header ---- */
+
+
+
 
 
 /* ---- mobile dropdown ---- */
-@media(min-width: 375px) {
+@media(min-width: 500px) {
     .mobile-button {
+        display: none;
+    }
+}
+
+
+@media(max-width: 500px) {
+    /* -- mobile dropdown -- */
+    .dropdown-menu-closed #close-menu-button {
+        display: none;
+    }
+    .dropdown-menu-opened #open-menu-button {
         display: none;
     }
 }
