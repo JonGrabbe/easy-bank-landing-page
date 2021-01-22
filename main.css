@@ -29,6 +29,13 @@ ul, li {
 button:hover {
     cursor: pointer;
 }
+.heading {
+    font-weight: 400;
+}
+.heading-large {
+    font-size: 3em;
+}
+
 
 
 /* ---- header ---- */
@@ -36,8 +43,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 45px var(--padding-space);
+    position: relative;
+    z-index: 100;
+    background-color: white;
 }
 #flex-nav-links-container {
     display: flex;
@@ -50,6 +59,29 @@ header {
 .header-nav-link:last-child {
     margin-right: 0;
 }
+
+
+
+/* ---- banner ---- */
+.banner-container {
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+    background-color:hsl(0, 0%, 98%);
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+.banner-left-col {
+    width: 25%;
+    margin-left: 160px;
+}
+#banner-img {
+    position: absolute;
+    top: -150px;
+    right: 0;
+    z-index: 0;
+}
+
 
 
 
