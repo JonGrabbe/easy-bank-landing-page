@@ -10,9 +10,17 @@
 </head>
 <body>
     <header class="dropdown-menu-closed" id="header">
-        <img src="images/logo.svg" alt="" class="logo" id="header-logo">
-        <nav>
-            <ul>
+        <div class="mobile-controls-container">
+            <img src="images/logo.svg" alt="" class="logo" id="header-logo">
+            <button class="img-button mobile-button" id="open-menu-button" onclick=openMenu()>
+                <img src="images/icon-hamburger.svg" alt="">
+            </button>
+            <button class="img-button mobile-button" id="close-menu-button" onclick=closeMenu()>
+                <img src="images/icon-close.svg" alt="">
+            </button>
+        </div>
+        <nav id="dropdown-menu-container">
+            <ul id="flex-nav-links-container">
                 <li class="header-nav-link">Home</li>
                 <li class="header-nav-link">About</li>
                 <li class="header-nav-link">Contact</li>
@@ -20,14 +28,8 @@
                 <li class="header-nav-link">Careers</li>
             </ul>
         </nav>
-        <a href="" class="main-button">Request Invite</a>
+        <a href="" class="main-button" id="header-request-invite-button">Request Invite</a>
         <!-- mobile buttons -->
-        <button class="img-button mobile-button" id="open-menu-button" onclick=openMenu()>
-            <img src="images/icon-hamburger.svg" alt="">
-        </button>
-        <button class="img-button mobile-button" id="close-menu-button" onclick=closeMenu()>
-            <img src="images/icon-close.svg" alt="">
-        </button>
     </header>
 
 

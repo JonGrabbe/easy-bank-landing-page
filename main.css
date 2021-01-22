@@ -17,15 +17,95 @@ ul, li {
 
 
 
+/* ---- global ---- */
+:root {
+    --padding-space: 10%;
+    --padding-space-mobile: 5%;
+}
+.img-button {
+    background: none;
+    border: none;
+}
+button:hover {
+    cursor: pointer;
+}
+
 
 /* ---- header ---- */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 45px var(--padding-space);
+}
+#flex-nav-links-container {
+    display: flex;
+    align-items: center;
+}
+.header-nav-link {
+    margin-right: 25px;
+    color: grey;
+}
+.header-nav-link:last-child {
+    margin-right: 0;
+}
 
 
 
 
 
+
+@media(max-width: 910px) {
+    /* --- header --- */
+    header {
+        flex-direction: column;
+        padding: 22px var(--padding-space-mobile);
+    }
+    .mobile-controls-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    /* -- mobile dropdown -- */
+    #dropdown-menu-container {
+        display: none;
+        border-radius: 20px;
+    }
+    .dropdown-menu-opened #dropdown-menu-container {
+        display: block;
+        width: 100%;
+        margin: auto;
+        margin-top: 50px;
+    }
+    #flex-nav-links-container {
+        flex-direction: column;
+        background-color: lightgray;
+        border-radius: 8px;
+    }
+    .header-nav-link {
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+    .header-nav-link:first-child {
+        margin-top: 25px;
+    }
+    #header-request-invite-button {
+        display: none;
+    }
+    .dropdown-menu-closed #close-menu-button {
+        display: none;
+    }
+    .dropdown-menu-opened #open-menu-button {
+        display: none;
+    }
+    
+}
+
+
+@media(min-width: 910px) {
 /* ---- mobile dropdown ---- */
-@media(min-width: 500px) {
     .mobile-button {
         display: none;
     }
@@ -33,11 +113,5 @@ ul, li {
 
 
 @media(max-width: 500px) {
-    /* -- mobile dropdown -- */
-    .dropdown-menu-closed #close-menu-button {
-        display: none;
-    }
-    .dropdown-menu-opened #open-menu-button {
-        display: none;
-    }
+
 }
