@@ -128,14 +128,36 @@ header {
 
 
 /* ---- latest articles ---- */
+#latest-articles-container {
+    background-color: var(--very-light-gray);
+    padding-bottom: 80px;
+}
 #latest-articles-container .col-4-heading-container {
     padding: 50px 0;
 }
 #latest-articles-container .col-4-row {
-    grid-gap: 10px;
+    /* grid-gap: 10px; */
+}
+#latest-articles-container .col-4-item {
+    background-color: white;
+    max-width: 280px;
 }
 .article-thumb-img {
     width: 280px;
+}
+.article-text {
+    padding-left: 25px;
+    padding-right: 10px;
+    color: grey;
+}
+.author {
+    font-size: .7em;
+    color: lightgray;
+}
+.article-title {
+    font-size: 1.1em;
+    color: inherit;
+    font-weight: 400;
 }
 
 
@@ -190,7 +212,9 @@ header {
     }
     .dropdown-menu-opened #dropdown-menu-container {
         display: block;
-        width: 100%;
+        position: absolute;
+        top: 50px;
+        width: 80%;
         margin: auto;
         margin-top: 50px;
     }
@@ -267,6 +291,9 @@ header {
         flex-direction: column;
         align-items: center;
     }
+    #latest-articles-container .heading {
+        text-align: center;
+    }
 }
 
 @media(max-width: 600px) {
@@ -283,10 +310,14 @@ header {
           flex-direction: column;
           align-items: center;
       }
-      .col-4-item p {
+      #why-choose-easy-bank-container .col-4-item p {
           text-align: center;
       }
       .col-4-heading-container * {
           text-align: center;
+      }
+      /* --- latest articles --- */
+      #latest-articles-container .col-4-item {
+          align-items: start;
       }
 }
