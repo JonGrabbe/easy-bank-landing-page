@@ -22,6 +22,9 @@ ul, li {
 :root {
     --padding-space: 10%;
     --padding-space-mobile: 5%;
+    /* colors */
+    --light-grayish-blue: hsl(220, 16%, 96%);
+    --very-light-gray: hsl(0, 0%, 98%);
 }
 .img-button {
     background: none;
@@ -33,11 +36,16 @@ button:hover {
 .heading {
     margin: 0;
 }
+.heading-medium {
+    font-size: 2.5em;
+    font-weight: 300;
+}
 .main-button {
     background: none;
     border: none;
     padding: 0;
 }
+
 
 
 /* ---- header ---- */
@@ -65,7 +73,7 @@ header {
 
 /* ---- banner ---- */
 #banner-container {
-    background-color: lightgray;
+    background-color: var(--very-light-gray);
     height: 80vh;
     box-sizing: border-box;
 }
@@ -85,9 +93,67 @@ header {
 }
 
 
+/* ---- col 4 ---- */
+.col-4-container {
+    padding: 0 var(--padding-space)
+}
+.col-4-heading-container {
+    max-width: 700px;
+}
+.col-4-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: start;
+}
+.col-4-item {
+    margin-right: 20px;
+}
+.col-4-item:last-child {
+    margin-right: 0;
+}
+
+
+/* ---- why choose easy bank ---- */
+#why-choose-easy-bank-container {
+    background-color: var(--light-grayish-blue);
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+#why-choose-easy-bank-container .heading {
+    margin-bottom: 35px;
+}
+#why-choose-easy-bank-container .col-4-item {
+    margin-top: 60px;
+}
+
+
+/* ---- latest articles ---- */
+#latest-articles-container .col-4-heading-container {
+    padding: 50px 0;
+}
+#latest-articles-container .col-4-row {
+    grid-gap: 10px;
+}
+.article-thumb-img {
+    width: 280px;
+}
 
 
 
+
+
+
+@media(max-width: 1380px) {
+    /* --- col-4 --- */
+    .col-4-row {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
+        /* padding: 20px; */
+    }
+    .col-4-item {
+        margin-right: 0;
+    }
+}
 
 
 @media(max-width: 1220px) {
@@ -185,6 +251,42 @@ header {
     }
 }
 
-@media(max-width: 540px) {
-      
+@media(max-width: 830px) {
+    /* --- col 4 --- */
+    .col-4-container {
+        padding: 0 var(--padding-space-mobile);
+    }
+    .col-4-row {
+        padding: 0;
+    }
+}
+
+@media(max-width: 660px) {
+    #latest-articles-container .col-4-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width: 600px) {
+    .col-4-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width: 460px) {
+      .col-4-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+      .col-4-item p {
+          text-align: center;
+      }
+      .col-4-heading-container * {
+          text-align: center;
+      }
 }
