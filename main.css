@@ -26,6 +26,7 @@ ul, li {
     /* colors */
     --light-grayish-blue: hsl(220, 16%, 96%);
     --very-light-gray: hsl(0, 0%, 98%);
+    --dark-blue: hsl(233, 26%, 24%);
 }
 .img-button {
     background: none;
@@ -44,10 +45,18 @@ button:hover {
 .heading-small {
     font-weight: 560;
 }
+.heading-large {
+    font-size: 3em;
+    font-weight: 400;
+}
 .main-button {
     background: none;
     border: none;
-    padding: 0;
+    padding: 15px 40px;
+    border-radius: 30px;
+    background-image: linear-gradient(to bottom right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    color: white !important;
+    font-size: 16px;
 }
 p {
     color: grey;
@@ -157,8 +166,6 @@ header {
 }
 
 
-
-
 /* ---- latest articles ---- */
 #latest-articles-container {
     background-color: var(--very-light-gray);
@@ -190,6 +197,17 @@ header {
     font-size: 1.1em;
     color: inherit;
     font-weight: 400;
+}
+
+
+/* ---- footer ---- */
+footer {
+    padding: 50px var(--padding-space);
+    background-color: var(--dark-blue);
+}
+.footer-social-media-container {
+    display: flex;
+    
 }
 
 
@@ -312,6 +330,9 @@ header {
         max-width: none;
         margin-left: 0;
         padding: 0 var(--padding-space-mobile);
+    }
+    #banner-left-col .heading-large {
+        font-size: 2em;
     }
     .banner-left-col-item {
         text-align: center;
