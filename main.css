@@ -41,10 +41,16 @@ button:hover {
     font-size: 2.5em;
     font-weight: 300;
 }
+.heading-small {
+    font-weight: 560;
+}
 .main-button {
     background: none;
     border: none;
     padding: 0;
+}
+p {
+    color: grey;
 }
 
 
@@ -115,21 +121,41 @@ header {
 
 
 /* ---- why choose easy bank ---- */
-#why-choose-easy-bank-container {
+#wceb-container {
+    padding: 0 var(--padding-space);
+    padding-bottom: 100px;
     background-color: var(--light-grayish-blue);
-    padding-top: 120px;
-    padding-bottom: 120px;
 }
-#why-choose-easy-bank-container .heading {
-    margin-bottom: 35px;
+#wceb__heading-container {
+    padding-top: 110px;
+    margin-bottom: 70px;
+    max-width: 700px;
 }
-#why-choose-easy-bank-container .col-4-item {
-    margin-top: 60px;
-    max-width: 300px;
+#wceb__heading-container h2 {
+    margin-bottom: 21px;
 }
-#why-choose-easy-bank-container p {
+#wceb__heading-container p {
+    margin: 0;
     color: grey;
 }
+#wceb-col-4-row {
+    display: flex;
+    justify-content: flex-start;
+}
+.wceb-col-4-row-item {
+    max-width: 330px;
+    margin-right: 30px;
+}
+.wceb-col-4-row-item h3 {
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+.wceb-col-4-row-item p {
+    margin: 0;
+    line-height: 1.4;
+    font-size: 16px;
+}
+
 
 
 
@@ -189,6 +215,24 @@ header {
     #banner-img {
         width: 600px;
         top: 100px;
+    }
+}
+
+
+@media(max-width: 1130px) {
+    /* --- why choose easy bank --- */
+    #wceb-container {
+        padding-left: var(--padding-space-mobile);
+        padding-right: var(--padding-space-mobile);
+        padding-bottom: 40px;
+    }
+    #wceb-col-4-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: start;
+    }
+    .wceb-col-4-row-item {
+        margin-bottom: 60px;
     }
 }
 
@@ -307,6 +351,27 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    /* --- why choose easybank --- */
+    #wceb__heading-container {
+        padding-top: 70px;
+    }
+    #wceb__heading-container * {
+        text-align: center;
+        width: initial;
+        max-width: none;
+    }
+    #wceb-col-4-row {
+        grid-template-columns: 1fr;
+    }
+    .wceb-col-4-row-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+    }
+    .wceb-col-4-row-item * {
+        text-align: center;
     }
 }
 
